@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 from .models import Recipe
 
@@ -10,3 +10,10 @@ def list(request):
         "recipes/list.html",
         {"recipes": Recipe.objects.all()}
     )
+    
+    
+def details(request, id):
+    """
+    /recipes/1 -> /recipes
+    """
+    return redirect("/recipes/")
