@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1>Dodaj post</h1>
+        <form method="POST">
+            {% csrf_token %}
+            <label for="title">Tytuł:</label><br>
+            <input type="text" id="title" name="title"><br>
+            <textarea id="w3review" name="content" rows="4" cols="50">
+                Wpisz tresc
+            </textarea><br>
+            <input type="submit" value="dodaj">
+        </form>
+    </body>
+</html>
